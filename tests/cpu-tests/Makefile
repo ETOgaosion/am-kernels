@@ -27,6 +27,9 @@ run: all
 	@cat $(RESULT)
 	@rm $(RESULT)
 
+ref:
+	@spike -l pk build/$(ALL)-spike.elf 2> build/$(ALL).ref
+
 gdb: all
 
 clean:
